@@ -28,10 +28,13 @@ def initialize(override_settings: Settings | None = None) -> tuple[FastAPI, Sett
         allow_methods=["*"],
         allow_headers=["*"],
     )
-    with engine.begin():
-        Base.metadata.create_all(engine)
+    Base.metadata.create_all(engine)
 
     return (_app, _settings)
 
 
-app, settings = initialize()
+app: FastAPI | None
+settings: Settings | None
+
+if __name__ == "__main__":
+    app, settings = initialize()
