@@ -9,10 +9,18 @@ class ViewModel(BaseModel):
         from_attributes=True,
     )
 
-class FruitRequest(ViewModel):
+
+class FruitCreateRequest(ViewModel):
     name: str
     color: str
     price_per_kg: int
 
-class FruitResponse(FruitRequest):
+
+class FruitUpdateRequest(ViewModel):
+    name: str | None = None
+    color: str | None = None
+    price_per_kg: int | None = None
+
+
+class FruitResponse(FruitCreateRequest):
     id: int
