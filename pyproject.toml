@@ -1,0 +1,25 @@
+[project]
+name = "somewebserver"
+version = "0.0.1"
+description = ""
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard] (>=0.115.11,<0.116.0)",
+    "sqlalchemy (>=2.0.39,<3.0.0)",
+    "pydantic (>=2.10.6,<3.0.0)",
+    "fastapi-sqlalchemy (>=0.2.1,<0.3.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.15.0"
+black = "^25.1.0"
+
