@@ -36,5 +36,4 @@ def initialize(override_settings: Settings | None = None) -> tuple[FastAPI, Sett
 app: FastAPI | None
 settings: Settings | None
 
-if __name__ == "__main__":
-    app, settings = initialize()
+app, settings = initialize()

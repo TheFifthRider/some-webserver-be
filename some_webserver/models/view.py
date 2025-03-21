@@ -24,3 +24,18 @@ class FruitUpdateRequest(ViewModel):
 
 class FruitResponse(FruitCreateRequest):
     id: int
+
+class ItemResponse(ViewModel):
+    id: int
+    name: str
+    description: str
+    image: str
+    price: int
+
+class AddOrRemoveFromCartRequest(ViewModel):
+    item_id: int
+
+class ShopperCheckoutRequest(ViewModel):
+    name: str
+    address: str
+    credit_card_number: str
